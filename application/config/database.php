@@ -6,10 +6,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'meuframe',
+	'hostname' => 'mysql380.umbler.com:41890',
+	'username' => 'gfdaia',
+	'password' => 'anubis369',
+	'database' => 'meuprojetoframee',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

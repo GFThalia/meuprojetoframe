@@ -11,12 +11,12 @@ class Contato extends CI_Controller {
     }
 
     public function index() {
-//        $this->load->view('template/header');
+        $this->load->view('template/header');
         $dados['acronico'] = "MPF";
         $dados['completo'] = "Meu Projeto Framework";
         $dados['contatos'] = $this->contatos->listar();
         $this->load->view('contato', $dados);
-//        $this->load->view('template/footer');
+        $this->load->view('template/footer');
     }
 
     public function excluir($id) {
