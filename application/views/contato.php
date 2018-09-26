@@ -15,8 +15,12 @@
    <!-- <div class="bg-light"> -->
         
     <div class="d-block p-2 bg-light">
-        <div class="dark">
-     <h2> Contato </h2> 
+    <div class="dark">
+            
+     <h2> Contato </h2>
+     
+     
+     
         </div>
    </br>
       <?php echo form_open('contato/inserir');?>
@@ -25,9 +29,20 @@
       <label>Nome:</label> </br>
       <input  class="form-control" name="nome" type="text" required/>
       <p> </p>
+      
       <label>E-mail:</label> </br>
       <input class="form-control" name="email" type="email"  required/>
+      <p> </p>
+    
+       <label for="idfuncao">Função:</label>
+       <select class="form-control" aria-label="ngSelected demo" required="requered" id="idfuncao" name="idfuncao" type="name" required/>
+       <option>Selecionar Função... </option>
+       <?php foreach ($funcao as $funcao): ?>
+       <option value="<?php echo $funcao->idfuncao; ?>"><?php echo $funcao->nomefuncao; ?></option>
 
+       <?php endforeach; ?>    
+       </select>
+              
             </br>
             </br>
           <!-- <div class="bg clearfix float-right"> -->
@@ -51,6 +66,7 @@
                     <th>Nome</th> 
                     <th>E-mail</th>
                     <th>Função</th>
+                    <th>Funções</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,6 +77,7 @@
                             <tr>
                                 <td><?php echo $row->nome; ?></td>
                                 <td><?php echo $row->email; ?></td>
+                                <td><?php echo $row->funcao; ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 
                                             'contato/editar/' . $row->id; ?>">Editar</a>
@@ -78,16 +95,16 @@
     
         <a type="button" class="btn btn btn-outline-dark" href= "<?php echo base_url().'home';?>">Voltar</a>
         </br>
-              <input type="button" class="btn btn-outline-dark" id="botao1" value="copy"/>
+         <!-- botar isso depois sua anta lenta    <input type="button" class="btn btn-outline-dark" id="botao1" value="copy"/>
               <input type="button" class="btn btn-outline-dark" id="botao2" value="excel"/>
               <input type="button" class="btn btn-outline-dark" id="botao3" value="dpf"/>
-              <input type="button" class="btn btn-outline-dark" id="botao4" value="print"/>
-          </div> 
-          
+              <input type="button" class="btn btn-outline-dark" id="botao4" value="print"/> -->
+          </br>
+          </br>
           
           <script type="text/javascript">
               
-           
+          
         $(document).ready(function () {
         $('#contatos').DataTable({
             language: {

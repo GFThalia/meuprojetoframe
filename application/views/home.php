@@ -9,4 +9,5 @@
     <h2>Home</h2>
     <p></p>
     <a href="<?php echo base_url() . 'contato'; ?>">Adicionar Contato</a>
+    <a href="<?php echo base_url() . 'funcao'; ?>">Adicionar Função</a>
 </div>

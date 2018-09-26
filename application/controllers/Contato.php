@@ -7,6 +7,7 @@ class Contato extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Contatos_model', 'contatos');
+        $this->load->model('Funcao_model', 'funcao');
         //contatos é um alias para o Contatos_model 
     }
 
@@ -27,6 +28,7 @@ class Contato extends CI_Controller {
     public function inserir() {
         $dados['nome'] = $this->input->post('nome');
         $dados['email'] = $this->input->post('email');
+        $dados['idfuncao'] = $this->input->post('idfuncao');
         $this->contatos->inserir($dados);
         redirect('contato');
     }
