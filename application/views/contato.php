@@ -1,27 +1,16 @@
   <div class="container " >
       <div class=" row">
           <div class="col-lg-3 col-xs-1 col-sm-1"></div>
-          <div class="col-lg-6 col-xs-10 co1-am-10"
-        <?php
-        // put your code here
-        
-//        echo $acronico;
-        echo "<br>";
-//        echo $completo;
-        echo "<p>";
-        ?>
+          <div class="col-lg-6 col-xs-10 co1-am-10">
+
     </br>
-  
-   <!-- <div class="bg-light"> -->
-        
+    
     <div class="d-block p-2 bg-light">
-    <div class="dark">
-            
+        
+     <div class="dark">
      <h2> Contato </h2>
-     
-     
-     
-        </div>
+     </div>
+        
    </br>
       <?php echo form_open('contato/inserir');?>
      
@@ -77,11 +66,11 @@
                             <tr>
                                 <td><?php echo $row->nome; ?></td>
                                 <td><?php echo $row->email; ?></td>
-                                <td><?php echo $row->funcao; ?></td>
+                                <td><?php echo $row->nomefuncao; ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 
                                             'contato/editar/' . $row->id; ?>">Editar</a>
-                                    |
+                                    
                                     <a href="<?php echo base_url() . ''
                                             . 'contato/excluir/' . $row->id; ?>">Excluir</a>
                                 </td>
@@ -122,3 +111,6 @@
         });
     });
 </script>
+          </div>
+      </div>
+  </div>

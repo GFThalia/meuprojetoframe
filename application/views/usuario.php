@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <div class="container">
           <div class=" row">
           <div class="col-lg-3 col-xs-1 col-sm-1"></div>
@@ -13,17 +7,33 @@ and open the template in the editor.
  <br>
  
 <div class="d-block p-2 bg-light">
- 
-   <h2>Funcao</h2>
-   <?php echo form_open('funcao/inserir'); ?>
+       <div class="dark"> <h2>Usuario</h2> </div>
+       
+   <?php echo form_open('usuario/inserir'); ?>
    <br>
    
    <div class="form-group">
     
-       <label for="nomefuncao">Insira aqui a função:</label>
+       <label for="nomeusuario">Usuario:</label>
        <br>
-       <input class="form-control" id="nomefuncao" name="nomefuncao" type="text" required/>
+       <input class="form-control" id="nomeusuario" name="nomeusuario" type="text" required/>
        <br>
+       
+       <label for="user">Login:</label>
+       <br>
+       <input class="form-control" id="user" name="user" type="text" required/>
+       <br>
+       
+       <label for="senha">Senha:</label>
+       <br>
+       <input class="form-control" id="senha" name="senha" type="password" required/>
+       <br>
+       
+       <label for="perfilacesso">Tipo de Perfil:</label>
+       <br>
+       <input class="form-control" id="perfilacesso" name="perfilacesso" type="text" required/>
+       <br>
+       
        
    </div>
    <input class="btn btn btn-outline-dark" type="submit" value="Salvar"/>
@@ -43,26 +53,26 @@ and open the template in the editor.
            <table class="table table-bordered">
                <thead>
                    <tr>
-                       <th scope="col">Nome Função</th>
-                       <th scope="col">Funções</th>
+                       <th scope="col">Nome usuario</th>
+                       <th scope="col">usuario</th>
                    </tr>
                </thead>
                <tbody>
-                   <?php if ($funcao == false): ?>
+                   <?php if ($usuario == false): ?>
                        <tr><td>Nenhum função encontrado</td></tr>
                    <?php else: ?>
-                       <?php foreach ($funcao as $row): ?>
+                       <?php foreach ($usuario as $row): ?>
                            <tr>
-                               <td><?php echo $row->nomefuncao; ?></td>
+                               <td><?php echo $row->nomeusuario; ?></td>
                                <td>
                                    <a href="<?php
                                    echo base_url() .
-                                   'funcao/editar/' . $row->idfuncao;
+                                   'usuario/editar/' . $row->idusuario;
                                    ?>">Editar</a>
                                    |
                                    <a href="<?php
                                    echo base_url() .
-                                   'funcao/excluir/' . $row->idfuncao;
+                                   'usuario/excluir/' . $row->idusuario;
                                    ?>">Excluir</a>
                                </td>
                            </tr>                  
@@ -73,4 +83,6 @@ and open the template in the editor.
            <br> 
              <a class="btn btn btn-outline-dark" href="<?php echo base_url() . 'home'; ?>">Voltar</a>
    </div>
- 
+          </div>
+          </div>
+</div>

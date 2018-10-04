@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Meu Projeto Framework</title>
@@ -14,4 +9,38 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
 <body>
-        
+    
+<!--       <div class="container">
+      <div class=" row">
+          <div class="col-lg-3 col-xs-1 col-sm-1"></div>
+          <div class="col-lg-6 col-xs-10 co1-am-10"> -->
+              
+              
+              
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <a class="navbar-brand" href="<?php echo base_url() . 'home'; ?>">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" href="<?php echo base_url() . 'home'; ?>">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url() . 'funcao'; ?>"> Função <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url() . 'usuario'; ?>"> Usuarios <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+            
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url() . 'contato'; ?>"> Contatos <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+      </nav>

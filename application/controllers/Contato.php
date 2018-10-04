@@ -6,6 +6,9 @@ class Contato extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+//        if (!$this->session->userdata('estou_logado')){
+//            redirect('login');
+//        }
         $this->load->model('Contatos_model', 'contatos');
         $this->load->model('Funcao_model', 'funcao');
         //contatos é um alias para o Contatos_model 
@@ -16,6 +19,7 @@ class Contato extends CI_Controller {
         $dados['acronico'] = "MPF";
         $dados['completo'] = "Meu Projeto Framework";
         $dados['contatos'] = $this->contatos->listar();
+        $dados['funcao'] = $this->funcao->listar();
         $this->load->view('contato', $dados);
         $this->load->view('template/footer');
     }
