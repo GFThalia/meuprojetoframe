@@ -15,8 +15,14 @@
           <div class="col-lg-3 col-xs-1 col-sm-1"></div>
           <div class="col-lg-6 col-xs-10 co1-am-10"> -->
               
-              
-              
+   <div class="container " >
+      <div class=" row">
+          <div class="col-lg-3 col-xs-1 col-sm-1"></div>
+          <div class="col-lg-6 col-xs-10 co1-am-10">
+
+
+     <?php if ($this->session->userdata('estou_logado')){?>
+     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
  <a class="navbar-brand" href="<?php echo base_url() . 'home'; ?>">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" href="<?php echo base_url() . 'home'; ?>">
@@ -43,4 +49,6 @@
         <a class="nav-link" href="<?php echo base_url() . 'contato'; ?>"> Contatos <span class="sr-only">(current)</span></a>
       </li>
     </ul>
+       <a class="btn btn-secondary" href="<?php echo base_url().'login/sair';?>">Sair</a>     
       </nav>
+     <?php } ?>
